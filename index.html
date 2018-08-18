@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./pictures/logos/kseanobackgroun.jpg">
+    <title>KSEA at UVa</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+  </head>
+  <style>
+  .square_btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color:#000;
+    border-radius: 2px;
+    box-shadow:0 1px 1px #fff;
+    transition: .4s;
+    width:200px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    padding-right: 20px;
+    line-height: 44px;
+    margin-left:41%;
+    margin-right:39%;
+  position: relative;
+}
+.square_btn:hover {
+    background-color:#706f6f;
+    color: white;
+}
+.class_btn {
+    background-color: transparent;
+    border:0px;
+}
+.class_btn:hover {
+    background-color:#15335a;
+    color: white;
+}
+.month {
+            padding: 10px 10px;
+            width: 100%;
+            background: #000099;
+            text-align: center;
+        }
+
+        .month ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .month .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .month .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .weekdays li {
+            display: inline-block;
+            width: 13.6%;
+            color: #666;
+            text-align: center;
+        }
+
+        .days {
+            padding: 10px 0;
+            background: #eee;
+            margin: 0;
+        }
+
+        .days li {
+            list-style-type: none;
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size:12px;
+            color: #777;
+        }
+
+        .days li .active {
+            padding: 5px;
+            background: #FF8000;
+            color: white !important
+        }
+
+        /* Add media queries for smaller screens */
+        @media screen and (max-width:720px) {
+            .weekdays li, .days li {width: 13.1%;}
+        }
+
+        @media screen and (max-width: 420px) {
+            .weekdays li, .days li {width: 12.5%;}
+            .days li .active {padding: 2px;}
+        }
+
+        @media screen and (max-width: 290px) {
+            .weekdays li, .days li {width: 12.2%;}
+        }
+</style>    
+<script>
+    function showclass(classid) {
+        var all = document.getElementsByClassName("class")
+        for (i = 0; i < all.length; i++) {
+            if (all[i].id == classid) {
+                if (all[i].style.display=="block") {
+                    document.getElementById(classid).style.display="none";
+                }else {
+                    document.getElementById(classid).style.display="block";
+                }
+            }else {
+                all[i].style.display = "none";
+            }
+        }
+    }
+</script>
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">KSEA</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#events">Events</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#exec">Exec</a>
+            </li>
+            <li class ="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#offers">Offers</a>
+            </li>
+            <li class ="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#kconnect">Get Connected</a>
+            </li>
+            <li class ="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>KSEA</strong>
+            </h1>
+            <h3 class="text-uppercase">
+                Korean American Scientists and Engineering Association
+            </h3>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5"><strong>At the University of Virginia</strong></p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About KSEA!</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 mx-auto text-center">
+            <h2 class="section-heading text-white">KSEA</h2>
+            <hr class="light my-4"><br> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <p class="text-faded mb-4" style="text-align:left;">
+            Korean-American Scientists and Engineers Association
+            (KSEA) was established in 1971 as a non-profit professional organization and has grown to over 6,000 registered members with ~ 70 Local Chapter and Branches, ~30 Affiliated Professional Societies, and 13 Technical Groups across the United States
+            </p>
+            <p class="text-faded mb-4" style="text-align:left;padding-bottom: 0%;">
+            Vision & Misson
+            </p>
+            <ul class="text-faded mb-4" style="text-align:left;">
+                <li>Promote the application of science and technology for the general welfare of society</li>
+                <li>Foster international cooperation especially between the U.S. and Korea</li>
+                <li>Help Korean-American Scientists and Engineers develop their full career potential</li>
+                <li>Closely knit the memebers to the communities</li>
+            </ul>
+            <p class="text-faded mb-4" style="text-align:left;">
+            Membership Benefits
+            </p>
+            <ul class="text-faded mb-4" style="text-align:left;">
+                <li>Leadership development through committee activities and conference organization: KSEA has 13 Technical Groups and 14 Standing Committees for your participation. You are welcome to organize technical sessions at the annual U.S.-Korea Conference on Science, Technology, and Entrepreneurship (UKC) or you may organize a conference of your own.</li>
+                <li>Networking with other Korean-American scientists and engineers: Join the Technical Groups and Committees, or come to the annual conference, UKC. The KSEA is unique in that its members come from all fields of science and engineering. The UKC offers an excellent opportunity to learn about other fields than your own.</li>
+                <li>Office use at KSEA Office while in DC: If you need a temporary office while in DC, please come to the KSEA Headquarters office. No charge for the use of a computer and local calls. Nominal charges for other office support or supplies.</li>
+                <li>Participation in technical evaluation and consulting: We will contact you when we need experts for these services.</li>
+                <li>Opportunities for community service: You may participate in community service activities of your chapter. Or you may help with National Math Competition.</li>
+                <li>Information on professional opportunities in both U.S. and Korea: Look for job openings on the KSEA web.                    </li>
+                <li>Awards program: KSEA honors members of distinguished records by presenting them with KSEA Awards.                    </li>
+                <li>Membership dues supporting your chapter: Most of your dues go back to your own chapter.                    </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="background-color:transparent;border:5px solid rgba(224, 222, 217, 0.74)">
+              <img class="card-img-top" src="./pictures/groupphoto/Groupphoto_row.jpg" alt="groupphoto">
+              <div class="card-body" style="text-align:left">
+                <strong style="color:#E57200"><i class="fa fa-map-marker" aria-hidden="true"></i> Location:</strong> <span style="color:white">University of Virginia</span><br>
+                <strong style="color:#E57200"><a href="mailto:kseayguva@gmail.com"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:kseayguva@gmail.com">kseayguva@gmail.com</a><br>
+                <strong style="color:#E57200"><a href="mailto:kseayguva@gmail.com"><i class="fa fa-envelope-o"></i></a> President:</strong><a style="color:white" href="mailto: jp6kc@virginia.edu">Jeongsu Park</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-8 mx-auto text-center"><br><br>
+              <a class="btn btn-light btn-xl js-scroll-trigger text-center" href="#events">Events</a>
+            </div>
+          </div>
+      </div>
+      </section>
+
+    <section id="events">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Events</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="month">
+            <ul>
+            <li>
+            August<br>
+            <span style="font-size:18px">2018</span>
+            </li>
+            </ul>
+        </div>
+        <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+        </ul>
+        <ul class="days">
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li><a class="js-scroll-trigger" href="#randomrow"><span class="active">10</span></a></li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</span></li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li><a class="js-scroll-trigger" href="#activitiesfair"><span class="active">27</span></a></li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        </ul>
+        <table class="table table-hover">
+        <thead>
+        <tr>
+        
+        <th scope="col">List of Events</th>
+        <th scope="col"></th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+        <td><a class="js-scroll-trigger" href="#activitiesfair"><span class="pull-left"><img src="http://www.uvastudentcouncil.com/wp-content/uploads/2016/07/IMG_7770.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><span class: "pull-left" style="text-align:left"><strong>Activities Fair</strong>
+        </br>Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!
+        </br> <span style="font-size:50%">Click on picture for more details</span>
+        </td>
+        </tr>
+        
+        <td><a class="js-scroll-trigger" href="#randomrow"><span class="pull-left"><img src="https://static.tildacdn.com/tild6438-3565-4838-b266-363130326466/GrapefruitMethod.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><span class: "pull-left" style="text-align:left"><strong>Networking KSEA & UVa Faculty!</strong>
+        </br>Come network with the fellow faculty at UVa. Faculty memebers are from all schools including the medical school. If you are looking for a research opportunity or internship come join us! 
+        </br>  <span style="font-size:50%">Click on picture for more details</span>
+        </td>
+        </tr>
+        
+        </tbody>
+        </table>
+        <section id="activitiesfair">
+            <div class="container text-left">
+              <div class="row">
+                  <div class="col-md-8" style="overflow:hidden">
+                      <h2 style="color:#E57200"><strong>Activities Fair</strong></h2>
+                        <p style="color:rgb(53, 50, 50)">
+                        We are pleased to announce that KSEA will be participating at the activities fair on Aug 20th, 2018! During activities fair we will be introducing KSEA to the general public and show them what we do as an organization. Come learn how you can recieve scholarships/jobs/internships and come learn how you can be a part of the KSEA family!
+                      </p><br><img style="width:300px;height:150px;"alt="" src="http://www.uvastudentcouncil.com/wp-content/uploads/2016/07/IMG_7770.jpg">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card" style="background-color:transparent;border:none;width: auto;">
+                      <div class="card-body">
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Who:</strong> KSEA members & Everybody
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">What:</strong> Acitivites Fair. Information Fair to introduce KSEA to new and current students of UVa.
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">When:</strong> Aug 27th, 2018
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Where:</strong> TBD
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Why:</strong> Introduce KSEA to the community
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+
+                            </div>
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="row">
+                        <div class="col-md-6 mx-auto text-center"><br><br>
+                            <a  class="btn btn-primary btn-xl js-scroll-trigger" href="#events">Back to Events</a>
+                        </div>
+                        <div class="col-md-6 mx-auto text-center"><br><br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#exec">Executive Board</a>
+                        </div>
+                    </div>
+              </div>
+      </div>
+      </section>
+      <section id="randomrow">
+            <div class="container text-left">
+              <div class="row">
+                  <div class="col-md-8" style="overflow:hidden">
+                      <h2 style="color:#E57200"><strong>Random Row Networking!</strong></h2>
+                        <p style="color:rgb(53, 50, 50)">
+                        We are pleased to announce that KSEA will hold a Member Brings New Member event on April 7th 4:00 pm- 7:00 pm @ Random Row in Downtown! You can encourage your Korean colleagues, friends, family to join this event. There will be FREE DRINKS AND FREE FOOD (wings and pizzas) for KSEA members and event attendees. 
+                      </p><br><img style="width:300px;height:150px;"alt="randomrow" src="./pictures/events/randomrowopener.jpg">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card" style="background-color:transparent;border:none;width: auto;">
+                      <div class="card-body">
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Who:</strong>  KSEA members & UVa Faculty (Public event)
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">What:</strong> Netwokring with faculty of UVa for making opporutnities such as research or internships. Get to know the facutly of UVa
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">When:</strong> April 7th 4:00pm - 7:00pm
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Where:</strong> Random Row Brewing Co.
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Why:</strong> Get to know the faculty of UVa and start networking.
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">RSVP:</strong> RSVP with Facebook! <a style="color:#3B5998" href="https://www.facebook.com/events/1842294239403823/"><i class="fa fa-facebook-square fa-2x mb-2 sr-contact"></i></a>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            </div>
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="row">
+                        <div class="col-md-6 mx-auto text-center"><br><br>
+                            <a  class="btn btn-primary btn-xl js-scroll-trigger" href="#events">Back to Events</a>
+                        </div>
+                        <div class="col-md-6 mx-auto text-center"><br><br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#exec">Executive Board</a>
+                        </div>
+                    </div>
+              </div>
+      </div>
+    </section>
+      <section class ="bg-dark text-white" id="exec">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Executive Board!</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <p>Chapter Board Members</p>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <img class="rounded-circle" src="./pictures/profile/byungkyupark.jpg" alt="Photo of Brian Park" width="140" height="140">
+              <p style="font-size:75%">
+                <strong>Brian Park</strong><br>
+                President/Advisor for KSEA Central Virginia Chapter <br>Associate Professor in Civil & Environmental Engineering <br>               
+                <strong style="color:#E57200"><a href="mailto:bp6v@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:bp6v@virginia.edu">bp6v@virginia.edu</a><br>
+            </p>
+            </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <img class="rounded-circle" src="./pictures/logos/uvarotunda.png" alt="Photo of Francis Ryu" width="140" height="140">
+              <p style="font-size:75%">
+                <strong>Seunghan Ryu (Francis) </strong><br>
+                Tresurer for KSEA Central Virginia Chapter  <br>President for Korean Graduate Student Association  <br>               
+                <strong style="color:#E57200"><a href="mailto:sr5ae@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:sr5ae@virginia.edu">sr5ae@virginia.edu</a><br>
+            </p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+          </div>
+          </div><br>
+          <p>YG Board Members</p>
+          <div class="row">
+          <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/jeongsupark.jpg" alt="Photo of Jeongsu Park" width="140" height="140">
+              <p style="font-size:75%">
+                <strong>Jeongsu Park (Alice)</strong><br>
+                President  <br>B.S. Systems and information Engineering <br>               
+                <strong style="color:#E57200"><a href="mailto:jp6kc@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:jp6kc@virginia.edu"> jp6kc@virginia.edu</a><br>
+            </p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <img class="rounded-circle" src="./pictures/profile/hyunsuk.jpg" alt="Photo of Max Ryoo" width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Hyun Suk Ryoo (Max)</strong><br>
+                Co-Vice-President   <br>B.A. Computer Science <br> B.A. Statistics (Biostatistics Concentration)  <br>               
+                <strong style="color:#E57200"><a href="mailto:hr2ee@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:hr2ee@virginia.edu"> hr2ee@virginia.edu</a><br>
+            </p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/stellasonu.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Yuri Sonu (Stella) </strong><br>
+                Co-Vice-President   <br>B.A. Biology <br>               
+                <strong style="color:#E57200"><a href="mailto:ss7ap@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:ss7ap@virginia.edu"> ss7ap@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/parksujin.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Sujin Park</strong><br>
+                Secretary   <br>B.A. Computer Science <br> B.A. Studio Art<br>               
+                <strong style="color:#E57200"><a href="mailto:sjp7yf@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:sjp7yf@virginia.edu"> sjp7yf@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/jinijeon.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Jini Jeon </strong><br>
+                Treasurer    <br>B.A. Biology <br>               
+                <strong style="color:#E57200"><a href="mailto:jj7wt@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:jj7wt@virginia.edu"> jj7wt@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/jungyunjang.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Jungyun Jang (Jenny) </strong><br>
+                Public Relations/Event Cordinator    <br>B.A. Biology <br>               
+                <strong style="color:#E57200"><a href="mailto:jj6jz@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:jj6jz@virginia.edu"> jj6jz@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/umhaeun.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Ha Eun Um</strong><br>
+                Historian    <br>B.A. Chinese Language and Literature <br> M.A. Elementary Education <br>               
+                <strong style="color:#E57200"><a href="mailto:hu9ga@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:hu9ga@virginia.edu">  hu9ga@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <img class="rounded-circle" src="./pictures/profile/stellasonu.jpg" alt="Photo of stellasonu " width="140" height="140">
+               <p style="font-size:75%">
+                <strong>Dongwook Kim </strong><br>
+                Historian   <br>B.A. Mathematics (Probabilities and Statistics Concentration) <br>               
+                <strong style="color:#E57200"><a href="mailto:dk2sq@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:white" href="mailto:dk2sq@virginia.edu"> dk2sq@virginia.edu</a><br>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-8 mx-auto text-center"><br><br>
+              <a class="btn btn-light btn-xl js-scroll-trigger text-center" href="#offers">What do we Offer?</a>
+            </div>
+          </div>
+    </section>
+    <section id="offers">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">What We Offer</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mx-auto text-center"><br><br>
+                <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#scholarships">Scholarships</a>
+            </div>
+            <div class="col-md-4 mx-auto text-center"><br><br>
+                <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#Internships">Internships</a>
+            </div>
+            <div class="col-md-4 mx-auto text-center"><br><br>
+                <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#kconnect">Conntect K-UVa</a>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section  id="scholarships">
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-md-8" style="overflow:hidden">
+                    <h2 style="color:#E57200"><strong>KSEA Scholarship</strong></h2>
+                        Objective:
+                        <ul>
+                            <li>To recognize outstanding undergraduate students in the United States who excel in academics as well as in services to the community, and have demonstrated a potential to become future leaders of the society for closer cooperation between the U.S. and Korea.</li>
+                        </ul>
+                        Scholarship:
+                        <ul>
+                            <li>Scholar Ship reward: $2000 each</li>
+                            <li>Number of recipients: 20 people</li>
+                        </ul>
+                        Details:
+                        <ul>
+                            <li style="color:#cc0707">Deadline : 5:00 PM (EDT) March 31, 2018 (Saturday)</li>
+                            <li>The evaluation will be based on the following criteria:
+                                <ul>
+                                    <li>Academic performance</li>
+                                    <li>Recommendation letters</li>
+                                    <li>KSEA activities and community service</li>
+                                    <li>Essay</li>
+                                </ul>
+                            </li>
+                        </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card" style="background-color:transparent;border:none;width: auto;">
+                      <div class="card-body">
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Who:</strong>  KSEA members
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">What:</strong> Scholarship
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Deadline:</strong> 5:00 PM (EDT) March 31, 2018 (Saturday)
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Link:</strong> <a style="color:rgb(0, 0, 0)" href="http://scholarship.ksea.org/InfoUndergraduate.aspx">http://scholarship.ksea.org/InfoUndergraduate.aspx</a>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-4 mx-auto text-center"><br><br>
+                            <a  class="btn btn-primary btn-xl js-scroll-trigger" href="#offers">Back to Offers</a>
+                        </div>
+                        <div class="col-md-4 mx-auto text-center"><br><br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#Internships">Internships</a>
+                        </div>
+                        <div class="col-md-4 mx-auto text-center"><br><br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#kconnect">Connect K-UVa</a>
+                        </div>
+                    </div>
+      </div>
+    </section>
+     <section class ="bg-dark text-white" id="Internships">
+        <div class="container text-left">
+                <h2 style="color:#E57200"><strong>KSEA Internship Offerings</strong></h2>
+
+             <table class="table table-hover">
+        <thead>
+        <tr>
+        
+        <th scope="col">List of Internships</th>
+        <th scope="col"></th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+        <td><a class="js-scroll-trigger" href="#fasoo"><span class="pull-left"><img src="./pictures/events/Fasco_Global_Internship_small.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><span class: "pull-left" style="text-align:left"><strong>Fasoo Internship</strong>
+        </br>Internship offer for Software Engineering and Marketing Strategies! 
+        </br> <span style="font-size:50%">Click on picture for more details</span>
+        </td>
+        </tr>
+        
+        </tbody>
+        </table>
+        <div class="row">
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#exec">Executive</a>
+                </div>
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#scholarships">Scholarships</a>
+                </div>
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#kconnect">Conntect K-UVa</a>
+                </div>
+            </div>
+      </div>
+    </section>
+    <section class ="bg-dark text-white" id="fasoo">
+            <div class="container text-left">
+              <div class="row">
+                  <div class="col-md-8" style="overflow:hidden">
+                      <h2 style="color:#E57200"><strong>Fasoo Internship</strong></h2>
+                        <p>
+                        클라우드, 모바일, 사이버테러 등 급변하는 IT환경 속에서도 데이터와 소프트웨어 본연의 가치를 지키며 끝없이 자유롭게 발전하는 디지털 세상, 바로 파수닷컴이 그리는 내일입니다. <br><br>
+
+                        DRM, 소스코드 오류 분석기 등 기업용 제품에서메모장 애플리케이션 등 개인용 제품까지, 파수닷컴은 끊임없이 새로운 고부가가치 기술분야를 개척하고, 성공적으로 사업 영역을 확장해 나가고 있습니다. <br><br>
+                                
+                        미국 법인을 기반으로 새로이 도약하고 있는 파수닷컴과 함께 Digital Transformation을 리드할 글로벌 인재, 바로 당신을 기다립니다.</p><br>
+                        <img style="width:300px;height:500px;"alt="randomrow" src="./pictures/events/Fasco_Global_Internship.jpg">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card" style="background-color:transparent;border:none;width: auto;">
+                      <div class="card-body">
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            <p>
+                                <strong style="color:#E57200">Who:</strong>  KSEA members/Everybody
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            <p>
+                                <strong style="color:#E57200">Hours:</strong> 40hr (8h/1day)
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            <p>
+                                <strong style="color:#E57200">When:</strong> Summer June 11 ~ Aug 3, 2018 (8 weeks)
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            <p>
+                                <strong style="color:#E57200">Where:</strong> TBD
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            <p>
+                                <strong style="color:#E57200">Salary:</strong> 1,600,000 KRW/4weeks
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#E57200; ">
+                            </div>
+                          </div>
+                        </div>
+                  </div> 
+                  <div class="row">
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#Internships">Back to Internships</a>
+                </div>
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#scholarships">Scholarships</a>
+                </div>
+                <div class="col-md-4 mx-auto text-center"><br><br>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#kconnect">Conntect K-UVa</a>
+                </div>
+            </div>
+              </div>
+      </div>
+    </section>
+     <section id="kconnect">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Korean Organizations at University of Virginia</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-lg-4 mr-auto text-center">
+             <a  href="http://www.uva-ksea.org/"><img class="rounded-circle" src="./pictures/logos/ksealogoblack.png" alt="Photo of KSEA" width="140" height="140"></a>
+              <p style="font-size:75%">
+                <strong>Korean-American Scientists and Engineers Association (KSEA) </strong><br>   
+                <strong style="color:#E57200">Website:</strong> <a style="color:rgb(40, 71, 163)" href="http://www.uva-ksea.org/"> http://www.uva-ksea.org/ </a><br>
+                <strong style="color:#E57200"><a href="mailto:kseayguva@gmail.com"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:rgb(40, 71, 163)" href="mailto:kseayguva@gmail.com">  kseayguva@gmail.com</a><br>
+                <strong style="color:#E57200">President:</strong> Jeongsu Park (<a style="color:rgb(40, 71, 163)" href="mailto:jp6kc@virginia.edu">jp6kc@virginia.edu</a>)<br>
+                <strong style="color:#E57200">Social Media:  <a style="color:#3B5998;padding-left:2px;" href="https://www.facebook.com/groups/kseaAtUva/about/"><i class="fa fa-facebook-square"></i></a> </strong><br>
+            </p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <a href="https://www.facebook.com/groups/2200074782/"><img class="rounded-circle" src="./pictures/logos/ksalogo.png" alt="Photo of KSA" width="140" height="140"></a>
+               <p style="font-size:75%">
+                <strong>Korean Student Association <br>(KSA at UVA) </strong><br>             
+                <strong style="color:#E57200"><a href="mailto:lkc9dw@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a  style="color:rgb(40, 71, 163)" href="mailto:lkc9dw@virginia.edu"> lkc9dw@virginia.edu</a><br>
+                <strong style="color:#E57200">President:</strong> Steve Hong (<a  style="color:rgb(40, 71, 163)" href="mailto:sjh5mt@virginia.edu">sjh5mt@virginia.edu</a>)<br>
+                <strong style="color:#E57200">Social Media:  <a style="color:#3B5998;padding-left:2px;" href="https://www.facebook.com/groups/2200074782/"><i class="fa fa-facebook-square"></i></a> <a style="color:#1DA1F2" href="https://twitter.com/ksa_uva?lang=en"><i class="fa fa-twitter-square"></i></a><a style="color:red;padding-left:2px;" href="https://www.youtube.com/channel/UCCrULtpfBAm2Mdq6qPHyGFQ"><i class="fa fa-youtube-play"></i></a></strong><br>
+            </p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+             <a href="https://www.facebook.com/groups/kcciccollegegroup/"><img class="rounded-circle" src="./pictures/logos/kcciclogo.png" alt="Photo of KCCIC " width="140" height="140"></a>
+               <p style="font-size:75%">
+                <strong>H.I.M (HERE I AM)</strong><br>
+                Korean Community Church in Charlottesville (KCCIC)<br>               
+                <strong style="color:#E57200">Website:</strong> <a style="color:rgb(40, 71, 163)" href="http://www.kccic.org/"> http://www.kccic.org/ </a><br>
+                <strong style="color:#E57200"><a href="mailto:kccicmail@gmail.com"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a style="color:rgb(40, 71, 163)" href="mailto:kccicmail@gmail.com">  kccicmail@gmail.com</a><br>
+                <strong style="color:#E57200">President:</strong> Dasam Jeong (<a style="color:rgb(40, 71, 163)" href="mailto:dj2vp@virginia.edu">dj2vp@virginia.edu</a>)<br>
+                <strong style="color:#E57200">Social Media:  <a style="color:#3B5998;padding-left:2px;" href="https://www.facebook.com/groups/kcciccollegegroup/"><i class="fa fa-facebook-square"></i></a> </strong><br>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <a href="https://www.facebook.com/LiNKatUVA/"><img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/LiNK_Logo.png" alt="Photo of LINK" width="140" height="140"></a>
+               <p style="font-size:75%">
+                <strong>Liberty in North Korea at UVa  <br>(LiNK at UVa) </strong><br>       
+                <strong style="color:#E57200">Website:</strong> <a style="color:rgb(40, 71, 163)" href="https://www.refugeerescues.org/"> https://www.refugeerescues.org/ </a><br>      
+                <strong style="color:#E57200"><a href="mailto:gsy2be@virginia.edu"><i class="fa fa-envelope-o"></i></a> Email:</strong> <a  style="color:rgb(40, 71, 163)" href="mailto:gsy2be@virginia.edu"> gsy2be@virginia.edu</a><br>
+                <strong style="color:#E57200">President:</strong> Grace Yi (<a  style="color:rgb(40, 71, 163)" href="mailto:gsy2be@virginia.edu">gsy2be@virginia.edu</a>)<br>
+                <strong style="color:#E57200">Social Media:  <a style="color:#3B5998;padding-left:2px;" href="https://www.facebook.com/LiNKatUVA/"><i class="fa fa-facebook-square"></i></a> <a style="color:#1DA1F2" href="https://twitter.com/LibertyinNK/"><i class="fa fa-twitter-square"></i></a><a href="https://www.instagram.com/libertyinnorthkorea/?hl=en"><i class="fa fa-instagram" style="padding-left:2px;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);-webkit-background-clip: text;background-clip: text;-webkit-text-fill-color: transparent;"></i></a></strong><br>
+            </p>
+            </div>
+             <div class="col-lg-4 mr-auto text-center">
+             <a href="https://www.facebook.com/kedgedance/"><img class="rounded-circle" src="./pictures/logos/kedgelogo.png" alt="Photo of KEDGE " width="140" height="140"></a>
+               <p style="font-size:75%">
+                <strong>K-Edge</strong><br>
+                <strong style="color:#E57200">Social Media:  <a style="color:#3B5998;padding-left:2px;" href="https://www.facebook.com/kedgedance/"><i class="fa fa-facebook-square"></i></a> <a href="https://www.instagram.com/kedgedance/"><i class="fa fa-instagram" style="padding-left:2px;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);-webkit-background-clip: text;background-clip: text;-webkit-text-fill-color: transparent;"></i></a><a style="color:red;padding-left:2px;" href="https://www.youtube.com/channel/UCtX05_cI901AqQKGiWoIAVA"><i class="fa fa-youtube-play"></i></a></strong><br>
+                </div>
+             <div class="col-lg-4 mr-auto text-center">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-8 mx-auto text-center"><br><br>
+              <a class="btn btn-primary btn-xl js-scroll-trigger text-center" href="#contact">Contact Us</a>
+            </div>
+          </div>
+    </section>
+    <section class ="bg-dark text-white" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Contact KSEA!</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <a style="color:#fff" href="http://www.virginia.edu/"><i class="fa fa-map-marker fa-3x mb-3 sr-contact"></i></a>
+              <p>
+                <a href="http://www.virginia.edu/">University of Vriniga</a>
+            </p>
+            </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <a style="color:#fff" href="http://www.uva-ksea.org/"><i class="fa fa-globe fa-3x mb-3 sr-contact"></i></a>
+            <p>
+            <a href="http://www.uva-ksea.org/">http://www.uva-ksea.org/</a>
+          </p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <a style="color:#fff" href="mailto:kseayguva@gmail.com"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i></a>
+            <p>
+              <a href="mailto:kseayguva@gmail.com">kseayguva@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div role = "contentinfo" style="bottom: 0; padding-top: 2em; padding-bottom:0em; margin-top: 10px;">
+          <div class="container" style = "text-align:center"> &copy; KSEA at University of Virginia. All rights reserved. </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+  </body>
+
+</html>
