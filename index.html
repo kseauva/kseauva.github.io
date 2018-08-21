@@ -50,6 +50,27 @@
     background-color:#706f6f;
     color: white;
 }
+.sub {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color:#E57200;
+    border-radius: 2px;
+    box-shadow:0 1px 1px #fff;
+    transition: .4s;
+    width:200px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    padding-right: 20px;
+    line-height: 44px;
+  position: relative;
+}
+.sub:hover {
+    background-color:#000099;
+    color: white;
+}
 .class_btn {
     background-color: transparent;
     border:0px;
@@ -803,6 +824,17 @@
             <hr class="my-4">
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-left">
+            <p class="section-heading">Fill out the form to be notified when new events come up!</p>
+            <form action="https://formspree.io/kseayguva@gmail.com" method="POST">
+                First Name:<input type="text" class="form-control" required="required" name="fname" placeholder="Enter your first name">
+                Last Name:<input type="text" class="form-control" required="required" name="lname" placeholder="Enter your last name">
+                Email:<input type="email" class="form-control" required="required" name="_replyto" placeholder="Enter your email (ex. ab2cd@virginia.edu)"><br>
+                <span class="text-righ" style="text-align: right"><p><input type="submit" class="sub" value="Send"></p></span>
+            </form>
+          </div>
+        </div><br>
         <div class="row">
           <div class="col-lg-3 ml-auto text-center">
             <a style="color:#fff" href="https://uva.campuslabs.com/engage/organization/ksea"><i class="fa fa-map-marker fa-3x mb-3 sr-contact"></i></a>
