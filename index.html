@@ -157,6 +157,53 @@
         @media screen and (max-width: 290px) {
             .weekdays li, .days li {width: 12.2%;}
         }
+
+.overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.8s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 60px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 </style>    
 <script>
     function showclass(classid) {
@@ -339,7 +386,7 @@
                     <li>7</li>
                     <li>8</li>
                     <li>9</li>
-                    <li><a class="js-scroll-trigger" href="#randomrow"><span class="active">10</span></a></li>
+                    <li>10</li>
                     <li>11</li>
                     <li>12</li>
                     <li>13</li>
@@ -356,7 +403,7 @@
                     <li>24</li>
                     <li>25</li>
                     <li>26</li>
-                    <li><a class="js-scroll-trigger" href="#activitiesfair"><span class="active">27</span></a></li>
+                    <li><a class="js-scroll-trigger"><span class="active" onclick="openactfairf2018()">27</span></a></li>
                     <li>28</li>
                     <li>29</li>
                     <li>30</li>
@@ -392,7 +439,7 @@
                 <li>3</li>
                 <li>4</li>
                 <li>5</li>
-                <li><a class="js-scroll-trigger" href="#firstgen"><span class="active">6</span></a></li>
+                <li><a onclick="openfisrtgenf18()" class="js-scroll-trigger"><span class="active">6</span></a></li>
                 <li>7</li>
                 <li>8</li>
                 <li>9</li>
@@ -424,7 +471,7 @@
         <table class="table table-hover">
         <thead>
         <tr>
-        
+
         <th scope="col">List of Events</th>
         <th scope="col"></th>
         </tr>
@@ -433,136 +480,30 @@
         <tbody>
         
         <tr>
-        <td><a class="js-scroll-trigger" href="#activitiesfair"><span class="pull-left"><img src="./pictures/events/actfair.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
-        <td><span class: "pull-left" style="text-align:left"><strong>Activities Fair</strong>
-        </br>Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!
-        </br> <span style="font-size:50%">Click on picture for more details</span>
-        </td>
-        </tr>
-        
-        <td><a class="js-scroll-trigger" href="#randomrow"><span class="pull-left"><img src="https://static.tildacdn.com/tild6438-3565-4838-b266-363130326466/GrapefruitMethod.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
-        <td><span class: "pull-left" style="text-align:left"><strong>Networking KSEA & UVa Faculty!</strong>
-        </br>Come network with the fellow faculty at UVa. Faculty memebers are from all schools including the medical school. If you are looking for a research opportunity or internship come join us! 
-        </br>  <span style="font-size:50%">Click on picture for more details</span>
-        </td>
-        </tr>
 
-        <td><a class="js-scroll-trigger" href="#firstgen"><span class="pull-left"><img src="./pictures/events/kseafirstgen.jpeg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><a class="js-scroll-trigger"><span class="pull-left"><img onclick="openfisrtgenf18()" src="./pictures/events/kseafirstgen.jpeg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
         <td><span class: "pull-left" style="text-align:left"><strong>First General Meeting!</strong>
         </br>Come join us for our First General Meeting! Come see whats in store for you this semester as a KSEA member!!!
         </br>  <span style="font-size:50%">Click on picture for more details</span>
         </td>
         </tr>
         
-        </tbody>
-        </table>
-        <section id="activitiesfair">
-            <div class="container text-left">
-              <div class="row">
-                  <div class="col-md-8" style="overflow:hidden">
-                      <h2 style="color:#E57200"><strong>Activities Fair</strong></h2>
-                        <p style="color:rgb(53, 50, 50)">
-                        We are pleased to announce that KSEA will be participating at the activities fair on Aug 20th, 2018! During activities fair we will be introducing KSEA to the general public and show them what we do as an organization. Come learn how you can recieve scholarships/jobs/internships and come learn how you can be a part of the KSEA family!
-                      </p><br><img style="width:300px;height:150px;"alt="" src="./pictures/events/actfair.jpg">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="background-color:transparent;border:none;width: auto;">
-                      <div class="card-body">
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Who:</strong> KSEA members & Everybody
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">What:</strong> Acitivites Fair. Information Fair to introduce KSEA to new and current students of UVa.
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">When:</strong> Aug 27th, 2018
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Where:</strong> TBD
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Why:</strong> Introduce KSEA to the community
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-
-                            </div>
-                          </div>
-                        </div>
-                  </div> 
-                  <div class="row">
-                        <div class="col-md-6 mx-auto text-center"><br><br>
-                            <a  class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#events">Back to Events</a>
-                        </div>
-                        <div class="col-md-6 mx-auto text-center"><br><br>
-                            <a class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#exec">Executive Board</a>
-                        </div>
-                    </div>
-              </div>
-      </div>
-      </section>
-      <section id="randomrow">
-            <div class="container text-left">
-              <div class="row">
-                  <div class="col-md-8" style="overflow:hidden">
-                      <h2 style="color:#E57200"><strong>Random Row Networking!</strong></h2>
-                        <p style="color:rgb(53, 50, 50)">
-                        We are pleased to announce that KSEA will hold a Member Brings New Member event on April 7th 4:00 pm- 7:00 pm @ Random Row in Downtown! You can encourage your Korean colleagues, friends, family to join this event. There will be FREE DRINKS AND FREE FOOD (wings and pizzas) for KSEA members and event attendees. 
-                      </p><br><img style="width:300px;height:150px;"alt="randomrow" src="./pictures/events/randomrowopener.jpg">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="background-color:transparent;border:none;width: auto;">
-                      <div class="card-body">
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Who:</strong>  KSEA members & UVa Faculty (Public event)
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">What:</strong> Netwokring with faculty of UVa for making opporutnities such as research or internships. Get to know the facutly of UVa
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">When:</strong> April 7th 4:00pm - 7:00pm
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Where:</strong> Random Row Brewing Co.
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">Why:</strong> Get to know the faculty of UVa and start networking.
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            <p>
-                                <strong style="color:#E57200">RSVP:</strong> RSVP with Facebook! <a style="color:#3B5998" href="https://www.facebook.com/events/1842294239403823/"><i class="fa fa-facebook-square fa-2x mb-2 sr-contact"></i></a>
-                            </p>
-                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
-                            </div>
-                          </div>
-                        </div>
-                  </div> 
-                  <div class="row">
-                        <div class="col-md-6 mx-auto text-center"><br><br>
-                            <a  class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#events">Back to Events</a>
-                        </div>
-                        <div class="col-md-6 mx-auto text-center"><br><br>
-                            <a class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#exec">Executive Board</a>
-                        </div>
-                    </div>
-              </div>
-      </div>
-    </section>
-    <section id="firstgen">
-        <div class="container text-left">
+        <script>
+            function openfisrtgenf18() {
+              document.getElementById("firstgenf18").style.width = "100%";
+            }    
+            function closefirstgen() {
+              document.getElementById("firstgenf18").style.width = "0%";
+            }
+        </script>
+        <div id="firstgenf18" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closefirstgen()">&times;</a>
+            <div class="overlay-content">
+                <div class="container text-left">
           <div class="row">
               <div class="col-md-8" style="overflow:hidden">
                   <h2 style="color:#E57200"><strong>First General Meeting!</strong></h2>
-                    <p style="color:rgb(53, 50, 50)">
+                    <p style="color:#fff">
                         We are exited to say that our First General Meeting will be on September 6 (7pm) @ Clark 101!! Come learn more about who we are, and what's in store for you for this semester! <span style="color:red">FREE PIZZA!!!!</span>
                   </p><br><img style="width:300px;height:150px;"alt="randomrow" src="./pictures/events/kseafirstgen.jpeg">
               </div>
@@ -571,23 +512,23 @@
                   <div class="card-body">
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
-                            <strong style="color:#E57200">Who:</strong>  Everyone
+                            <strong style="color:#E57200">Who:</strong>  <strong style="color:#FFF">Everyone</strong>
                         </p>
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
-                            <strong style="color:#E57200">What:</strong> First General Meeting
+                            <strong style="color:#E57200">What:</strong> <strong style="color:#FFF">First General Meeting</strong>
                         </p>
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
-                            <strong style="color:#E57200">When:</strong> September 6 @ 7pm
+                            <strong style="color:#E57200">When:</strong> <strong style="color:#FFF">September 6 @ 7pm</strong>
                         </p>
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
-                            <strong style="color:#E57200">Where:</strong> Clark 101
+                            <strong style="color:#E57200">Where:</strong> <strong style="color:#FFF">Clark 101</strong>
                         </p>
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
-                            <strong style="color:#E57200">Why:</strong> Learn about what we planned and who we are
+                            <strong style="color:#E57200">Why:</strong> <strong style="color:#FFF">Learn about what we planned and who we are</strong>
                         </p>
                         <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
                         <p>
@@ -595,17 +536,130 @@
                       </div>
                     </div>
               </div> 
-              <div class="row">
-                    <div class="col-md-6 mx-auto text-center"><br><br>
-                        <a  class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#events">Back to Events</a>
-                    </div>
-                    <div class="col-md-6 mx-auto text-center"><br><br>
-                        <a class="hvr-grow btn btn-primary btn-xl js-scroll-trigger" href="#exec">Executive Board</a>
-                    </div>
-                </div>
+            </div>
           </div>
-  </div>
-</section>
+
+        <td><a class="js-scroll-trigger"><span class="pull-left"><img onclick="openactfairf2018()" src="./pictures/events/actfair.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><span class: "pull-left" style="text-align:left"><strong>Activities Fair</strong>
+        </br>Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!
+        </br> <span style="font-size:50%">Click on picture for more details</span>
+        </td>
+        </tr>
+        <script>
+            function openactfairf2018() {
+              document.getElementById("actfairf2018").style.width = "100%";
+            }    
+            function closeactfairf2018() {
+              document.getElementById("actfairf2018").style.width = "0%";
+            }
+        </script>
+        <div id="actfairf2018" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeactfairf2018()">&times;</a>
+            <div class="overlay-content">
+                    <div class="container text-left">
+                            <div class="row">
+                                <div class="col-md-8" style="overflow:hidden">
+                                    <h2 style="color:#E57200"><strong>Activities Fair</strong></h2>
+                                      <p style="color:#fff">
+                                      We are pleased to announce that KSEA will be participating at the activities fair on Aug 20th, 2018! During activities fair we will be introducing KSEA to the general public and show them what we do as an organization. Come learn how you can recieve scholarships/jobs/internships and come learn how you can be a part of the KSEA family!
+                                    </p><br><img style="width:300px;height:150px;"alt="" src="./pictures/events/actfair.jpg">
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="card" style="background-color:transparent;border:none;width: auto;">
+                                    <div class="card-body">
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                                          <p>
+                                              <strong style="color:#E57200">Who:</strong> <strong style="color:#FFF">KSEA members & Everybody</strong>
+                                          </p>
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                                          <p>
+                                              <strong style="color:#E57200">What:</strong> <strong style="color:#FFF">Acitivites Fair. Information Fair to introduce KSEA to new and current students of UVa.</strong>
+                                          </p>
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                                          <p>
+                                              <strong style="color:#E57200">When:</strong> <strong style="color:#FFF">Aug 27th, 2018</strong>
+                                          </p>
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                                          <p>
+                                              <strong style="color:#E57200">Where:</strong> <strong style="color:#FFF">TBD</strong>
+                                          </p>
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                                          <p>
+                                              <strong style="color:#E57200">Why:</strong> <strong style="color:#FFF">Introduce KSEA to the community</strong>
+                                          </p>
+                                          <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+              
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div> 
+                            </div>
+                    </div>
+            </div>
+        </div>
+        
+        <td><a class="js-scroll-trigger"><span class="pull-left"><img onclick="openrandomrows2018()" src="https://static.tildacdn.com/tild6438-3565-4838-b266-363130326466/GrapefruitMethod.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
+        <td><span class: "pull-left" style="text-align:left"><strong>Networking KSEA & UVa Faculty!</strong>
+        </br>Come network with the fellow faculty at UVa. Faculty memebers are from all schools including the medical school. If you are looking for a research opportunity or internship come join us! 
+        </br>  <span style="font-size:50%">Click on picture for more details</span>
+        </td>
+        </tr>
+        <script>
+            function openrandomrows2018() {
+              document.getElementById("randomrows2018").style.width = "100%";
+            }    
+            function closerandomrows2018() {
+              document.getElementById("randomrows2018").style.width = "0%";
+            }
+        </script>
+        <div id="randomrows2018" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closerandomrows2018()">&times;</a>
+                <div class="overlay-content">
+                     <div class="container text-left">
+              <div class="row">
+                  <div class="col-md-8" style="overflow:hidden">
+                      <h2 style="color:#E57200"><strong>Random Row Networking!</strong></h2>
+                        <p style="color:#fff">
+                        We are pleased to announce that KSEA will hold a Member Brings New Member event on April 7th 4:00 pm- 7:00 pm @ Random Row in Downtown! You can encourage your Korean colleagues, friends, family to join this event. There will be FREE DRINKS AND FREE FOOD (wings and pizzas) for KSEA members and event attendees. 
+                      </p><br><img style="width:300px;height:150px;"alt="randomrow" src="./pictures/events/randomrowopener.jpg">
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card" style="background-color:transparent;border:none;width: auto;">
+                      <div class="card-body">
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Who:</strong>  <strong style="color:#FFF">KSEA members & UVa Faculty (Public event)</strong>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">What:</strong> <strong style="color:#FFF">Netwokring with faculty of UVa for making opporutnities such as research or internships. Get to know the facutly of UVa</strong>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">When:</strong> <strong style="color:#FFF">April 7th 4:00pm - 7:00pm</strong>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Where:</strong> <strong style="color:#FFF">Random Row Brewing Co.</strong>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">Why:</strong> <strong style="color:#FFF">Get to know the faculty of UVa and start networking.</strong>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">RSVP:</strong> <strong style="color:#FFF">RSVP with Facebook!</strong> <a style="color:#3B5998" href="https://www.facebook.com/events/1842294239403823/"><i class="fa fa-facebook-square fa-2x mb-2"></i></a>
+                            </p>
+                            <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            </div>
+                          </div>
+                        </div>
+                  </div> 
+                </div>
+              </div>
+        </tbody>
+        </table>
+    </section>
       <section class ="bg-dark text-white" id="exec">
       <div class="container">
         <div class="row">
