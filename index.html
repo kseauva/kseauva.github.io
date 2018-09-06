@@ -51,6 +51,24 @@
     background-color:#706f6f;
     color: white;
 }
+.square_year {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color:#000;
+    border-radius: 2px;
+    transition: .4s;
+    width:100%;
+    height: 50px;
+    text-align: center;
+    padding-right: 20px;
+    line-height: 44px;
+    position: relative;
+}
+.square_year:hover {
+    background-color:#706f6f;
+    color: white;
+}
 .sub {
     display: inline-block;
     padding: 0.3em 1em;
@@ -229,6 +247,20 @@
                     document.getElementById(formid).style.display="none";
                 }else {
                     document.getElementById(formid).style.display="block";
+                }
+            }else {
+                all[i].style.display = "none";
+            }
+        }
+    }
+    function showyear(eventyearid) {
+        var all = document.getElementsByClassName("year")
+        for (i = 0; i < all.length; i++) {
+            if (all[i].id == eventyearid) {
+                if (all[i].style.display=="block") {
+                    document.getElementById(eventyearid).style.display="none";
+                }else {
+                    document.getElementById(eventyearid).style.display="block";
                 }
             }else {
                 all[i].style.display = "none";
@@ -469,26 +501,51 @@
             </div>
         </div>
         <br>
-        <table class="table table-hover">
-        <thead>
-        <tr>
-
-        <th scope="col">List of Events</th>
-        <th scope="col"></th>
-        </tr>
-        </thead>
-        
-        <tbody>
-        
-        <tr>
-
-        <td><a style="cursor: pointer;" class="js-scroll-trigger"><span class="pull-left"><img onclick="openfisrtgenf18()" src="./pictures/events/kseafirstgen.jpeg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
-        <td><span class: "pull-left" style="text-align:left"><strong>First General Meeting!</strong>
-        </br>Come join us for our First General Meeting! Come see whats in store for you this semester as a KSEA member!!!
-        </br>  <span style="font-size:50%">Click on picture for more details</span>
-        </td>
-        </tr>
-        
+        <div class="square_year text-left" onclick="showyear('2018-2019')"> <span style="padding-left:1%">Events for 2018-2019</span></div>
+        <div id ="2018-2019" class ="year text-left" style="display:none">
+                <br>
+                <p style = "font-size:50%;padding-bottom: 0%">Click on pictures for more details!</p>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center">
+                    <a style="cursor: pointer;" class="js-scroll-trigger">
+                      <img onclick="openfisrtgenf18()" src="./pictures/events/kseafirstgen.jpeg" alt="First General Meeting" width="250" height="100">
+                    </a>
+                        <p style="font-size:75%">
+                          <strong>First General Meeting!</strong><br>
+                          Come join us for our First General Meeting! Come see whats in store for you this semester as a KSEA member!!! <br><span style="color:red">FREE PIZZA</span>                      </p>
+                      </div>
+                      <div class="col-lg-4 mr-auto text-center">
+                        <a style="cursor: pointer;" class="js-scroll-trigger">
+                        <img onclick="openactfairf2018()" src="./pictures/events/actfair.jpg" alt="actfairf2018" width="250" height="100">
+                        </a>
+                        <p style="font-size:75%">
+                          <strong>Activities Fair</strong><br>
+                          Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!                         </p>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                    </div>
+                    </div>
+            </div>
+        <p></p>
+        <div style="padding-top:0%" class ="square_year text-left" onclick="showyear('2017-2018')"> <span style="padding-left:1%">Events for 2017-2018</span></div>
+        <div id ="2017-2018" class ="year text-left" style="display:none">
+            <br>
+            <p style = "font-size:50%;padding-bottom: 0%">Click on pictures for more details!</p>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center">
+                <a style="cursor: pointer;" class="js-scroll-trigger">
+                  <img onclick="openrandomrows2018()" src="./pictures/events/randomrowopener.jpg" alt="randomrows2018" width="250" height="100">
+                </a>
+                    <p style="font-size:75%">
+                      <strong>Random Row Networking!</strong><br>
+                      Come network with the fellow faculty at UVa. Faculty memebers are from all schools including the medical school. If you are looking for a research opportunity or internship come join us!                   </p>
+                  </div>
+                  <div class="col-lg-4 mr-auto text-center">
+                    </div>
+                <div class="col-lg-4 mr-auto text-center">
+                </div>
+                </div>
+        </div>
         <script>
             function openfisrtgenf18() {
               document.getElementById("firstgenf18").style.width = "100%";
@@ -539,13 +596,6 @@
               </div> 
             </div>
           </div>
-
-        <td><a style="cursor: pointer;" class="js-scroll-trigger"><span class="pull-left"><img onclick="openactfairf2018()" src="./pictures/events/actfair.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
-        <td><span class: "pull-left" style="text-align:left"><strong>Activities Fair</strong>
-        </br>Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!
-        </br> <span style="font-size:50%">Click on picture for more details</span>
-        </td>
-        </tr>
         <script>
             function openactfairf2018() {
               document.getElementById("actfairf2018").style.width = "100%";
@@ -598,13 +648,6 @@
                     </div>
             </div>
         </div>
-        
-        <td><a style="cursor: pointer;" class="js-scroll-trigger"><span class="pull-left"><img onclick="openrandomrows2018()" src="https://static.tildacdn.com/tild6438-3565-4838-b266-363130326466/GrapefruitMethod.jpg" class="rounded float-right" style="width:150px;height:100px;"alt=""></span></a></td>
-        <td><span class: "pull-left" style="text-align:left"><strong>Networking KSEA & UVa Faculty!</strong>
-        </br>Come network with the fellow faculty at UVa. Faculty memebers are from all schools including the medical school. If you are looking for a research opportunity or internship come join us! 
-        </br>  <span style="font-size:50%">Click on picture for more details</span>
-        </td>
-        </tr>
         <script>
             function openrandomrows2018() {
               document.getElementById("randomrows2018").style.width = "100%";
