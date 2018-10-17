@@ -192,10 +192,10 @@
 
 .overlay-content {
     position: relative;
-    top: 20%;
+    top: 15%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .overlay a {
@@ -527,8 +527,16 @@
             function openfisrtgenf18() {
               document.getElementById("firstgenf18").style.width = "100%";
             }    
-            function closefirstgen() {
+            function closefirstgenf18() {
               document.getElementById("firstgenf18").style.width = "0%";
+            }
+        </script>
+        <script>
+            function opensunbaef18() {
+              document.getElementById("sunbaef18").style.width = "100%";
+            }    
+            function closesunbaef18() {
+              document.getElementById("sunbaef18").style.width = "0%";
             }
         </script>
         <br>
@@ -537,6 +545,14 @@
                 <br>
                 Events for 2018-2019 <p style = "font-size:50%;padding-bottom: 0%">Click on pictures for more details!</p>
                 <div class="row">
+                    <div class="col-lg-4 mr-auto text-center">
+                        <a style="cursor: pointer;" class="js-scroll-trigger">
+                          <img onclick="opensunbaef18()" src="./pictures/events/meetsunbae.jpeg" alt="AskSunBae" width="250" height="100">
+                        </a>
+                            <p style="font-size:75%">
+                              <strong>Ask sunBAEs</strong><br>
+                              Come join us for Ask sunBAEs! It will be a time to make connections with fellow upperclassmen in the same major, ask them some questions and receive guidance!                        </p>                          
+                            </div>
                     <div class="col-lg-4 ml-auto text-center">
                     <a style="cursor: pointer;" class="js-scroll-trigger">
                       <img onclick="openfisrtgenf18()" src="./pictures/events/kseafirstgen.jpeg" alt="First General Meeting" width="250" height="100">
@@ -553,9 +569,6 @@
                               <strong>Activities Fair!</strong><br>
                               Check out the KSEA booth at the Acitivites fair this fall semester! Learn more about KSEA and see whats in store for the year!                         </p>                          
                             </div>
-                    <div class="col-lg-4 mr-auto text-center">
-                    </div>
-                    </div>
             </div>
         <p></p>
         <a style="cursor: pointer;" class="js-scroll-trigger"><div style="padding-top:0%" class ="square_year text-left" onclick="showyear('2017-2018')"> <span style="padding-left:1%">&#x2630 Events for 2017-2018</span></div></a>
@@ -577,8 +590,54 @@
                 </div>
                 </div>
         </div>
+         <div id="sunbaef18" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closesunbaef18()">&times;</a>
+            <div class="overlay-content">
+                <div class="container text-left">
+          <div class="row">
+              <div class="col-md-8" style="overflow:hidden">
+                  <h2 style="color:#E57200"><strong>Ask sunBAEs!</strong></h2>
+                    <p style="color:#fff">
+                        KSEA presents an upcoming event, Ask sunBAEs which will take place at Clark 101 on Thursday, November 1st at 7pm. It will be a time to make connections with fellow upperclassmen in the same major, ask them some questions and receive guidance on how to maneuver your way through the applicable majors here at UVA! So if you are a <span style="color:#1DA1F2">CS, Econ, Engineering, or Pre-Health major</span> looking for some relatable advice derived from experience, fill out this google form attached below to RSVP and we will see you there! (There will also be refreshments provided so come take a break from your busy week, sit back and listen to what your sunBAEs have to inform you on!!!) 
+                  </p><br><img style="width:300px;height:300px;"alt="randomrow" src="./pictures/events/meetsunbae.jpeg">
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="background-color:transparent;border:none;width: auto;">
+                  <div class="card-body">
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                            <strong style="color:#E57200">Who:</strong>  <strong style="color:#FFF">Everyone</strong>
+                        </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                            <strong style="color:#E57200">What:</strong> <strong style="color:#FFF">Ask sunBAEs</strong>
+                        </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                            <strong style="color:#E57200">When:</strong> <strong style="color:#FFF">Clark 101 on Thursday, November 1st at 7pm</strong>
+                        </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                            <strong style="color:#E57200">Where:</strong> <strong style="color:#FFF">Clark 101</strong>
+                        </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                            <strong style="color:#E57200">Why:</strong> <strong style="color:#FFF">Q&A for your major!</strong>
+                        </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                            <p>
+                                <strong style="color:#E57200">RSVP:</strong> <strong style="color:#FFF"></strong> <a style="text-decoration:underline;color:#1DA1F2" href="https://docs.google.com/forms/d/e/1FAIpQLSflQ940dhdoZYXbVOqPdfTKpBDiH8Toz4a4kfw26vpj4OjH8A/viewform?c=0&w=1">RSVP Link</a>
+                            </p>
+                        <hr style = "max-width: none;height:1px;border-color:#232D4B; ">
+                        <p>
+                        </div>
+                      </div>
+                    </div>
+              </div> 
+            </div>
+          </div>
         <div id="firstgenf18" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closefirstgen()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closefirstgenf18()">&times;</a>
             <div class="overlay-content">
                 <div class="container text-left">
           <div class="row">
